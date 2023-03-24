@@ -11,4 +11,5 @@ public class TestUtilities {
 	public static Logger log=LogManager.getLogger(TestUtilities.class.getName());
 	public static Random random = new Random();
 	public static int y = random.nextInt(1000);
+	public static String emailInput = "Vamsi" + y +"@gmail.com";
 }

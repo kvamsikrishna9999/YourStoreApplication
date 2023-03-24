@@ -70,14 +70,14 @@ public class BaseTest {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-//		driver.manage().timeouts().pageLoadTimeout(TestUtilities.PAGE_LOAD_TIMEOUT,TimeUnit.SECONDS);
-//		driver.manage().timeouts().implicitlyWait(TestUtilities.IMPLICIT_WAIT,TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(TestUtilities.PAGE_LOAD_TIMEOUT,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtilities.IMPLICIT_WAIT,TimeUnit.SECONDS);
 		driver.get(pro.getProperty("testURL"));
 
 	}
 
-	@AfterSuite
-	public static void closeApplication() {
-		driver.quit();
-	}
+//	@AfterSuite
+//	public static void closeApplication() {
+//		driver.quit();
+//	}
 }

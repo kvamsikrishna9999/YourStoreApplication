@@ -11,12 +11,13 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.testng.annotations.DataProvider;
 
 public class ReadXLSData {
 	public String[][] gatData(Method m) throws EncryptedDocumentException, IOException {
 		String excelSheetName=m.getName();
 
-		File f=new File(System.getProperty("user.dir")+".//src/test/java/com/telus/ninjaapplication/TestData/Untitled spreadsheet.xlsx");
+		File f=new File(System.getProperty("user.dir")+".//src/test/java/com/telus/ninjaapplication/testData/Untitled spreadsheet.xlsx");
 		FileInputStream fis=new FileInputStream(f);
 		Workbook wb=WorkbookFactory.create(fis);
 		Sheet sheetName=wb.getSheet(excelSheetName);
