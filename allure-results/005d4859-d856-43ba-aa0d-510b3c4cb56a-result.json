@@ -1,0 +1,50 @@
+{
+  "uuid" : "005d4859-d856-43ba-aa0d-510b3c4cb56a",
+  "historyId" : "3658e434eba99c91da63bf85245dff6a",
+  "fullName" : "com.telus.ninjaapplication.testcases.TestDataEndToEndApplication.getLoginPage",
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.telus.ninjaapplication.testcases.TestDataEndToEndApplication"
+  }, {
+    "name" : "testClass",
+    "value" : "com.telus.ninjaapplication.testcases.TestDataEndToEndApplication"
+  }, {
+    "name" : "testMethod",
+    "value" : "getLoginPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Default suite"
+  }, {
+    "name" : "suite",
+    "value" : "Default test"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.telus.ninjaapplication.testcases.TestDataEndToEndApplication"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-PVBHUTH"
+  }, {
+    "name" : "thread",
+    "value" : "16584@DESKTOP-PVBHUTH.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  } ],
+  "links" : [ ],
+  "name" : "getLoginPage",
+  "status" : "passed",
+  "statusDetails" : {
+    "known" : false,
+    "muted" : false,
+    "flaky" : false
+  },
+  "stage" : "finished",
+  "steps" : [ ],
+  "attachments" : [ ],
+  "parameters" : [ ],
+  "start" : 1680072957273,
+  "stop" : 1680072963620
+}

@@ -14,9 +14,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
 
 import com.telus.ninjaapplication.utilities.TestUtilities;
 
@@ -44,17 +47,16 @@ public class BaseTest {
         return destPath;
     }
 
-	@SuppressWarnings("deprecation")
 	@BeforeSuite
 	public static void launchApplication() {
 		try {
 			pro=new Properties();
-			FileInputStream ip=new FileInputStream(System.getProperty("user.dir")+".//src/test/java/com/telus/ninjaapplication/base/config.properties");
+			FileInputStream ip=new FileInputStream(System.getProperty("user.dir")+"./src/test/java/com/telus/ninjaapplication/base/config.properties");
 			pro.load(ip);
 
 		}catch(FileNotFoundException e){
 			e.printStackTrace();
-		}
+		} 
 		catch(IOException e){
 			e.printStackTrace();
 		}
@@ -76,8 +78,8 @@ public class BaseTest {
 
 	}
 
-//	@AfterSuite
-//	public static void closeApplication() {
-//		driver.quit();
-//	}
+	@AfterSuite
+	public static void closeApplication() {
+		driver.quit();
+	}
 }

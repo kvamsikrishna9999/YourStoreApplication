@@ -89,4 +89,6 @@ public class LoginCredentials {
 	public void clickLoginBtn1() {
 		loginBtnXpath.click();
 	}
+	
+	
 }

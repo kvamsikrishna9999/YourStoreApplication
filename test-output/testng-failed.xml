@@ -5,7 +5,12 @@
     <classes>
       <class name="com.telus.ninjaapplication.testcases.TestDataEndToEndApplication">
         <methods>
+          <include name="getLoginPage1"/>
+          <include name="getLoginPage"/>
+          <include name="getRegisterErrorPage"/>
           <include name="launchApplication"/>
+          <include name="closeApplication"/>
+          <include name="getLoginPage2"/>
           <include name="getRegisterPage"/>
         </methods>
       </class> <!-- com.telus.ninjaapplication.testcases.TestDataEndToEndApplication -->

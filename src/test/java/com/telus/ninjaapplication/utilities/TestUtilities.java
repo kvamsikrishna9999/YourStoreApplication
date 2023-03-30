@@ -1,4 +1,4 @@
-package com.telus.ninjaapplication.utilities;
+ package com.telus.ninjaapplication.utilities;
 
 import java.util.Random;
 

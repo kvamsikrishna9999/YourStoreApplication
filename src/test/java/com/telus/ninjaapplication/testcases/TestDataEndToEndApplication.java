@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import com.telus.ninjaapplication.base.BaseTest;
 import com.telus.ninjaapplication.pages.LoginCredentials;
 import com.telus.ninjaapplication.pages.RegisterPage;
+import com.telus.ninjaapplication.pages.RegisterPage2;
 import com.telus.ninjaapplication.utilities.ReadXLSData;
 
 
@@ -21,7 +22,28 @@ public class TestDataEndToEndApplication extends BaseTest{
 	int em = random.nextInt(1000);
 	String emailInput ="krish"+em+"@gamil.com";
 	String passwordInput = "Prassu@2022";
-@Test(priority = 1)
+	@Test(priority = 1)
+	public void getRegisterErrorPage() throws Exception {
+		RegisterPage2 registerPage1 = PageFactory.initElements(driver, RegisterPage2.class);
+		Thread.sleep(5000);
+		registerPage1.clickAccountName();
+		Thread.sleep(2000);
+		registerPage1.clickRegisterBtn();
+		Thread.sleep(2000);
+		registerPage1.getRegisterMsg();
+		Thread.sleep(2000);
+		registerPage1.clickContinueBtn();
+		Thread.sleep(2000);
+		registerPage1.getFirstNameErrorMsg();
+		registerPage1.getLastNameErrorMsg();
+		registerPage1.getEmailErrorMsg();
+		registerPage1.getTelephoneErrorMsg();
+		registerPage1.getPasswordErrorMsg();
+		registerPage1.SetSubsBtn();
+		registerPage1.clickPolicyBox();
+		registerPage1.getPolicyErrorMsg();
+	}
+@Test(priority = 2)
 	public void getRegisterPage() throws Exception {
 		RegisterPage registerPage = PageFactory.initElements(driver, RegisterPage.class);
 		Thread.sleep(2000);
@@ -53,8 +75,36 @@ public class TestDataEndToEndApplication extends BaseTest{
  		Thread.sleep(1000);
        registerPage.clickLogoutBtn();
 	}
+@Test(priority = 3)
+public void getLoginPage1() throws Exception {
+	LoginCredentials loginCredentials = PageFactory.initElements(driver, LoginCredentials.class);
+	Thread.sleep(1000);
+	loginCredentials.clickAccountName();
+	Thread.sleep(1000);
+	loginCredentials.clickLoginBtn();
+	Thread.sleep(1000);
+//	loginCredentials.setEmail1();
+//	Thread.sleep(1000);
+	loginCredentials.setPassword(passwordInput);
+	Thread.sleep(1000);
+	loginCredentials.clickLoginBtn1();
+}
 
-@Test(priority = 2)
+@Test(priority = 4)
+public void getLoginPage2() throws Exception {
+	LoginCredentials loginCredentials = PageFactory.initElements(driver, LoginCredentials.class);
+	Thread.sleep(1000);
+	loginCredentials.clickAccountName();
+	Thread.sleep(1000);
+	loginCredentials.clickLoginBtn();
+	Thread.sleep(1000);
+	loginCredentials.setEmail1(emailInput);
+	Thread.sleep(1000);
+//	loginCredentials.setPassword(passwordInput);
+//	Thread.sleep(1000);
+	loginCredentials.clickLoginBtn1();
+}
+@Test(priority = 5)
 public void getLoginPage() throws Exception {
 	LoginCredentials loginCredentials = PageFactory.initElements(driver, LoginCredentials.class);
 	Thread.sleep(1000);
